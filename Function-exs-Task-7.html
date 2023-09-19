@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function nodays(){
+            let a = prompt("Enter the Month");
+            let b = prompt("Enter the Year");
+            if(a==4|| a==6|| a==9|| a==11){
+                console.log("30");
+            }
+            else if(a!=2){
+                console.log("31");
+            }
+            else if(a==2){
+                if(b%4==0 && b%100!=0 || b%400==0 ){
+                    console.log("29");
+                }
+                else{
+                    consloe.log("28");
+                }
+            }
+        }
+        nodays();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checknow(){
+            var a = document.getElementById("data1").value
+            var b = document.getElementById("data2").value
+            if(a==b){
+                alert("Data's are equal")
+            }
+            else{
+                alert("Data's are not equal")
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="data1" >
+    <input type="text" id="data2">
+    <input type="button" value="check" onclick="checknow();">
+    
+</body>
+</html>

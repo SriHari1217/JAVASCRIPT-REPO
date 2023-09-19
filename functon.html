@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add() {
+            window.a = "10";
+            var b = "20";
+            var c = "30";
+            document.write(a + b * c);
+        }
+        function sub() {
+            document.write(window.a);
+        }
+        function mul() {
+            var a = 20;
+            document.write(window.a);
+        }
+        add();
+        sub();
+        mul();
+
+    </script>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus assumenda quod suscipit doloribus quidem quae
+        temporibus natus ipsam, quo et cupiditate nisi explicabo cum, voluptatibus quas minima nam. Quo, ipsum?</p>
+    <input type="button" value="Submit" onclick="add();">
+</body>
+
+</html>

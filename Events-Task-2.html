@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function promptbox(){
+        var s=prompt("Enter the Days Of the Week")
+        let d = s.toLowerCase();
+        switch(d){
+            case "monday":
+            case "tuesday":
+            case "wednesday": 
+            case "thursday": 
+            case "friday": 
+           document.write(s, " is a Weekday ")  ;
+           break;
+           case "saturday":
+           case "sunday":
+           document.write(s, " is a Weekend ");
+           break;
+           default:
+            document.write("Not Valid");
+            break;
+
+        }
+        }
+        promptbox();
+    </script>
+</head>
+<body>
+    
+    
+</body>
+</html>

@@ -1,0 +1,92 @@
+<style>
+    .background{
+        background-color: rgb(147, 167, 202);
+        min-height: 100vh;
+    }
+    h1{
+        color:  rgb(7, 7, 58);
+        text-align: center;
+    }
+    .background #Stop, #Ready, #Go{
+        background-color:  rgb(7, 7, 58);
+        color: white;
+        width: 70px;
+        border: none;
+        border: 1px solid  rgb(147, 167, 202);
+        border-radius: 10px;
+        margin-top: 70px;
+        margin-left: 70%;
+    }
+    .Traffic-light{
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(7, 7, 58);
+        width: 10%;
+        padding: 10px;
+        margin-top: 50px;
+        margin-left: 19%;
+        border-radius: 10px;
+    }
+    .Traffic-light button{
+        background-color:  rgb(46, 44, 44);
+    }
+
+</style>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="background">
+        <h1>Traffic Light</h1>
+        <div class="row row-cols-2">
+            <div class="col">
+        <div class="button d-flex flex-column">
+            <button class="p-2" id="Stop" onclick="Stop()">Stop</button>
+            <button class="p-2" id="Ready" onclick="Ready()">Ready</button>
+            <button class="p-2" id="Go" onclick="Go()">Go</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="Traffic-light">
+                <button id="stop-light" onclick="Stop()" class="stop-light mt-2 rounded-circle p-4"></button>
+                <button id="ready-light"onclick="Ready()" class="ready-light mt-5 rounded-circle p-4"></button>
+                <button id="go-light" onclick="Go()"class="go-light mt-5 mb-2 rounded-circle p-4"></button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script>
+        function Stop(){
+            document.getElementById("stop-light").style.backgroundColor = "red";
+            document.getElementById("Stop").style.backgroundColor = "red";
+            document.getElementById("ready-light").style.backgroundColor = "rgb(46, 44, 44)";
+            document.getElementById("go-light").style.backgroundColor = "rgb(46, 44, 44)";
+            document.getElementById("Ready").style.backgroundColor = "rgb(7, 7, 58)";
+            document.getElementById("Go").style.backgroundColor = "rgb(7, 7, 58)";
+        }
+        function Ready(){
+            document.getElementById("ready-light").style.backgroundColor = "yellow";
+            document.getElementById("Ready").style.backgroundColor = "yellow";
+            document.getElementById("Stop").style.backgroundColor = "rgb(7, 7, 58)";
+            document.getElementById("stop-light").style.backgroundColor = "rgb(46, 44, 44)";
+            document.getElementById("go-light").style.backgroundColor = "rgb(46, 44, 44)";
+            document.getElementById("Go").style.backgroundColor = "rgb(7, 7, 58)";
+        }
+        function Go(){
+            document.getElementById("go-light").style.backgroundColor = "green";
+            document.getElementById("Go").style.backgroundColor = "green";
+            document.getElementById("Stop").style.backgroundColor = "rgb(7, 7, 58)";
+            document.getElementById("stop-light").style.backgroundColor = "rgb(46, 44, 44)";
+            document.getElementById("ready-light").style.backgroundColor = "rgb(46, 44, 44)";
+            document.getElementById("Ready").style.backgroundColor = "rgb(7, 7, 58)";
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
