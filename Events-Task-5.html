@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function form_valid(){
+        let a = document.getElementById("data1").value
+        let b = document.getElementById("data2").value
+        if(a===""|| b===""){
+            alert("One of your data is empty, kindly fill it and try again")
+        }
+        else{
+            alert("Everthing's OK");
+        }
+    }
+    </script>
+
+</head>
+<body>
+    <input type="text" name="" id="data1">
+    <input type="text" name="" id="data2">
+    <input type="button" name="Check" value="Check" id="" onclick="form_valid()">
+
+    
+</body>
+</html>

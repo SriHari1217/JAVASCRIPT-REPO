@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function drop(){
+            var a = Number(document.getElementById("demo").value); 
+            for(i=1;i<a;i++){
+             document.getElementById("demo1").innerHTML+="<option>" + i + "</option>";
+            }
+
+        }
+        function press1
+        (){
+        var a = Number(document.getElementById("txt1").value);
+        for( i=1;i<a;i++){
+            document.getElementById("opt").innerHTML+="<option>"+ i + "</option>";
+        }
+       }
+    </script>
+</head>
+<body>
+    <input type="text" id="demo"  onkeypress="drop()">
+    <select  id="demo1"></select>
+    
+    <input type="text" id="txt1">
+    <button onclick="press1()">click</button>
+     <select id="opt"></select>
+    
+</body>
+</html>

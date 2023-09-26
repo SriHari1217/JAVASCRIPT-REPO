@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function drop() {
+            var a = Number(document.getElementById("demo").value);
+            for (i = 1; i <= a; i++) {
+
+                document.getElementById("demo1").innerHTML += "<option>" + i + "</option>";
+            }
+        }
+        function user1() {
+            var b = Number(document.getElementById("demo1").value);
+            for (let i = 0; i < b; i++) {
+                document.getElementById("task").innerHTML += "UserName:"+"<input type=text>"+"<br>"+"<br>";
+                // document.getElementById("task").innerHTML += "<input type=text>";
+                // document.getElementById("task").innerHTML += "<br>";
+                // document.getElementById("task").innerHTML += "<br>";
+                 
+                document.getElementById("task").innerHTML += "Password:"+ "<input type=password>"+"<br>"+"<br>"+"<br>";
+                // document.getElementById("task").innerHTML += "<input type=password>";
+                // document.getElementById("task").innerHTML += "<br>";
+                // document.getElementById("task").innerHTML += "<br>";
+                // document.getElementById("task").innerHTML += "<br>";
+
+
+                // var label = document.createElement("label");
+                // label.setAttribute("for", "myTextBox");
+                // label.textContent = "UserName: ";
+                // var formContainer = document.getElementById("task");
+                // formContainer.appendChild(label);
+                // var inputElement = document.createElement("input");
+                // inputElement.setAttribute("type", "text");
+                // inputElement.setAttribute("id", "myTextBox");
+                // var container = document.getElementById("task");
+                // container.appendChild(inputElement);
+                // var lineBreak = document.createElement("br");
+                // container.appendChild(lineBreak);
+                // var lineBreak = document.createElement("br");
+                // container.appendChild(lineBreak);
+              
+
+
+                // var label1 = document.createElement("label");
+                // label1.setAttribute("for", "myTextBox1");
+                // label1.textContent = "Password: ";
+                // var formContainer1 = document.getElementById("task");
+                // formContainer1.appendChild(label1);
+                // var inputElement1 = document.createElement("input");
+                // inputElement1.setAttribute("type", "password");
+                // inputElement1.setAttribute("id", "myTextBox1");
+                // var container1 = document.getElementById("task");
+                // container1.appendChild(inputElement1);
+                // var lineBreak1 = document.createElement("br");
+                // container1.appendChild(lineBreak1);
+                // var lineBreak1 = document.createElement("br");
+                // container1.appendChild(lineBreak1);
+                // var lineBreak1 = document.createElement("br");
+                // container1.appendChild(lineBreak1);
+            
+
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="demo">
+
+    <button onclick="drop()">Click</button>
+    <select id="demo1" onchange="user1()"></select><br><br>
+
+    <div id="task"></div>
+
+</body>
+
+</html>

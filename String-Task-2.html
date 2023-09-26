@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function protect_email(a){
+            // var b=a.split("_");
+            // var c=b[1].split("@");
+            // return(b[0]+"....@"+c[1]);
+            var b=a.split("@");
+            var c=b[0].length/2;
+            var d=b[0].substring(0,b[0].length-c);
+            return (d+"....@"+b[1])
+
+        }
+        console.log(protect_email("robin_singh@example.com"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

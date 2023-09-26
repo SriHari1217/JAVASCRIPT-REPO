@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function arithfunc(){
+            var a = document.getElementById("data1").value;
+            var b = document.getElementById("data2").value;
+            document.getElementById("out1").innerHTML=a+b;
+            document.getElementById("out2").innerHTML=a-b;
+            document.getElementById("out3").innerHTML=a*b;
+            document.getElementById("out4").innerHTML=a/b;
+            document.getElementById("out5").innerHTML=a%b;
+            
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="" id="data1">
+    <input type="text" name="" id="data2">
+    <input type="button" name=""  value="Display" id="" onclick="arithfunc();">
+    <P id="out1"></P>
+    <P id="out2"></P>
+    <P id="out3"></P>
+    <P id="out4"></P>
+    <P id="out5"></P>
+    
+</body>
+</html>

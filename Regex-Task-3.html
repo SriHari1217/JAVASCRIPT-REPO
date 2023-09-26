@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function demo(){
+            var a =document.getElementById("data").value
+           
+            var pattern = /^[0-9]+$/;
+            if(pattern.test(a) && a.length==10){
+                alert("valid");
+            }
+            else{
+                alert("Not Vaid");
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="">Enter the Mobile No:</label>
+    <input type="text" name="" id="data">
+    <button onclick="demo()">Click</button>
+    
+</body>
+</html>

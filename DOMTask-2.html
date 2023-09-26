@@ -25,11 +25,18 @@
             document.getElementById("bulb").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png";
             document.getElementById("cat").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png";
             document.getElementById("head").innerHTML = "Switched ON";
+            document.getElementById("btn1").style.backgroundColor="white"
+            document.getElementById("btn2").style.backgroundColor="green"
+            document.getElementById("btn1").style.color="black"
+
         }
         function OFF(){
             document.getElementById("bulb").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png";
             document.getElementById("cat").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png";
             document.getElementById("head").innerHTML = "Switched OFF";
+            document.getElementById("btn1").style.backgroundColor="red"
+            document.getElementById("btn2").style.backgroundColor="white"
+            document.getElementById("btn2").style.color="black"
         }
     </script>
   </head>
@@ -46,8 +53,8 @@
             <h5 id="head">Switched OFF</h5>
             </div>
             <div class="d-flex justify-content-center">
-                <button type="button" class="btn btn-danger m-2" onclick="OFF();">OFF</button>
-                <button type="button" class="btn btn-success m-2" onclick="ON();">ON</button>
+                <button type="button" class="btn btn-light m-2" id="btn1" onclick="OFF();">OFF</button>
+                <button type="button" class="btn btn-success m-2" id="btn2" onclick="ON();">ON</button>
                 
             </div>
         </div>

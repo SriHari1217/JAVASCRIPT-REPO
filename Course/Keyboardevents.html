@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function keydown(){
+            document.getElementById("demo").style.backgroundColor="red"
+        }
+        function keyup(){
+            document.getElementById("demo").style.backgroundColor="white"
+        }
+        function keypress(){
+            document.getElementById("demo").style.backgroundColor="blue"
+        }
+        function change(){
+        var a=  document.getElementById("demo") 
+         a.value= a.value.toUpperCase(); 
+         
+        }
+        function focuson(){
+           var b= document.getElementById("demo1")
+           b.style.backgroundColor="grey"
+           b.style.color="blue"
+           b.style.padding="10px"
+        }
+        function mouseout(){
+           var c= document.getElementById("demo1")
+           c.style.backgroundColor="white"
+            c.style.padding="2px"
+        }
+        function loading(){
+            document.getElementById("demo1").style.backgroundColor="blue"
+             
+        }
+       function changing(){
+        var a= Number(document.getElementById("demo").value)
+        var b= Number(document.getElementById("demo1").value)
+        var c= document.getElementById("myselect").value
+        
+        switch(c){
+            case "add":
+            document.getElementById("index").innerHTML=a+b;
+            document.getElementById("demo").style.backgroundColor="green"
+            document.getElementById("demo1").style.backgroundColor="grey"
+            
+            break;
+            case "mul":
+            document.getElementById("index").innerHTML=a*b;
+            document.getElementById("demo").style.backgroundColor="blue"
+            document.getElementById("demo1").style.backgroundColor="red"
+            break;
+            case "sub":
+            document.getElementById("index").innerHTML=a-b;
+            document.getElementById("demo").style.backgroundColor="red"
+            document.getElementById("demo1").style.backgroundColor="blue"
+            break;
+            case "div":
+            document.getElementById("index").innerHTML=a/b;
+            document.getElementById("demo").style.backgroundColor="black"
+            document.getElementById("demo1").style.backgroundColor="yellow"
+            break;
+        }
+        
+       }
+
+       function windowresize(){
+        let a = window.outerHeight
+        let x = window.outerWidth
+        let wid = a + " "+ x;
+        document.getElementById("windowsize").innerHTML=wid
+
+       }
+
+
+       
+
+
+    </script>
+</head>
+<body id="demo3" onresize="windowresize();" >
+    <form name="form1">
+    <label for="">keyboard Events:</label>
+    <input type="tel" name="number" id="demo"  onchange="change()" onkeypress="keypress()"  onkeydown="keydown()" onkeyup="keyup()" >
+    <label for="">Form Events:</label>
+    <input type="tel" name="number" id="demo1" onfocus="focuson()" onmouseout="mouseout()"onload="loading()">
+    <select name="" id="myselect" onchange="changing()">
+        <option value=""></option>
+        <option value="add" >Add</option>
+        <option value="mul" >Mul</option>
+        <option value="sub">Sub</option>
+        <option value="div">Div</option>
+    </select>
+    </form>
+    <p id="index"></p>
+
+    <p id="windowsize"></p>
+
+
+
+
+
+
+
+</body>
+</html>
