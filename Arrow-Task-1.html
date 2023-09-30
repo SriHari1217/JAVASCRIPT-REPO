@@ -5,16 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        let person="";
-        person=a=()=>{
-            return "hii";
-        }
-       console.log(a());
+    //     let person="";
+    //     person=a=(age,salary)=>{
+    //         this.age=age;
+    //         this.salary=salary      
+    //     }
+    //    console.log(a(20,100));
 
-       let person1="";
-        person1=a=>"hello"+" "+a;
+    //    let person1="";
+    //     person1=a=>"hello"+" "+a;
      
-       console.log(person1("world"));
+    //    console.log(person1("world"));
+
+
+//   this.name = name;
+// const vehicle = {
+//     name: 'Mercedes Benz',
+//     model: 'C-Class',
+//     manufacturer: 'Daimler AG Company',
+//     length: '4686mm',
+//     'cargo capacity': '12.6 cubic feet',
+//     wanted:() => {
+//         return this.name+" "+this.model;
+// }
+
+//  };
+ 
+// console.log(vehicle.wanted());
+let name ="hai"
+
+const person = {
+  name: 'John',
+  sayHello:(a)=>{
+    return a.name
+  }
+};
+
+console.log(person.sayHello(this)); 
+
+
+
+// const person = {
+//   firstName: 'John',
+//   lastName: 'Doe',
+//   fullName: function() {
+//     return this.firstName + ' ' + this.lastName;
+//   }
+// };
+
+// console.log(person.fullName()); // Output: "John Doe"
+
+  
+
+
+// const john = new person('John');
+// const alice = new person('Alice');
+
+// john.sayHello(); // Output: Hello, my name is John
+// alice.sayHello(); // Output: Hello, my name is Alice
+
     </script>
 </head>
 <body>

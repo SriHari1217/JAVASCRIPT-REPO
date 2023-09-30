@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+</head>
+<body>
+   
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+        let items =new Map([["f",100],["m",50],[10,100]]);
+       document.getElementById("demo1").innerHTML+=items.get("f");
+       items.set(10,12345);
+       document.getElementById("demo2").innerHTML+=items.get(10);
+      document.getElementById("demo3").innerHTML+=items.size
+       let total="";
+       items.forEach(function(b,a){
+           total+=a+"="+b+"<br>";
+
+       })
+       document.getElementById("demo4").innerHTML=total;
+       
+       
+</script> 
+   
+    
+</body>
+</html>
