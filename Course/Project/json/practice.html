@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>Dummy Json</title>
+</head>
+
+<body>
+    <table border="1">
+        <thead>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Address</th>
+            <th>Year of completion</th>
+        </thead>
+        <tbody id="tablebody">
+
+        </tbody>
+    </table>
+    <script>
+        fetch("https://fakestoreapi.com/products")
+            .then((res) => res.json())
+            .then((getdetails) => {
+                let output = ""
+                let tablebody = document.getElementById("tablebody")
+                getdetails.map((key) => {
+                    output += `
+                <tr>
+                    <td>${key.id}</td>
+                    <td>${key.title}</td>
+                    <td>${key.price}</td>
+                    <td>${key.description}</td>
+                </tr>    
+                `
+                })
+                tablebody.innerHTML = output;
+            })
+    </script>
+</body>
+
+</html>

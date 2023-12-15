@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="txt" onkeyup="fun()">
+    <input type="text" name="" id="txt1" onkeydown="fun1()">
+    <input type="text" name="" id="txt2" onkeypress="fun2()">
+    <form action="" onsubmit="taxt()">
+        <input type="text" name="" id="tas">
+        <button>submit</button>
+        <!-- <input type="submit" value="submit" > -->
+    </form>
+    <input type="text" name="" id="taz">
+    <input type="button" value="click" onchange="fas1()">
+    <select name="thr" id="rs" onchange="fin()">
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="ReactJS">ReactJS</option>
+      </select>
+
+
+    <script>
+        function fun(){
+            let a = document.getElementById("txt").value;
+            alert(a)
+        }
+        function fun1(){
+            let a = document.getElementById("txt1").value;
+            alert(a)
+        }
+        function fun2(){
+            let a = document.getElementById("txt2").value;
+            alert(a)
+        }
+        function taxt(){
+            let a = document.getElementById("tas").value;
+            alert(a)
+
+        }
+        function fas1(){
+            let a = document.getElementById("taz").value;
+            alert(a)
+        }
+        function fin(){
+            let a= document.getElementById("rs").value
+            alert(a);
+        }
+
+
+    </script>
+</body>
+</html>

@@ -9,18 +9,19 @@
             var a = document.getElementById("inp").value;
             var b = document.createElement("li");
             var c =document.getElementById("addthings");
-            var d = a
-            b.innerHTML=d;
-            c.appendChild(b);     
+            c.appendChild(b);
+            b.innerHTML=a;
+                 
+            document.getElementById("inp").value="";
         }
     </script>
-</head>
+</head> 
 <body>
     <h1>Add to Cart</h1>
     <input type="text" id="inp">
     <input type="button" id="add" onclick="addtocart()" value="add">
     <h3>My Cart items</h3>
-    <div id="addthings"></div>
+    <ul id="addthings"></ul>
    
 </body>
 </html>

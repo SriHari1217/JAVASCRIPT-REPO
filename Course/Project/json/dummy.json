@@ -1,0 +1,20 @@
+[
+    {
+        "firstname":"balamuruga",
+        "lastname":"S A",
+        "address":"Erode",
+        "degree_year":"2018"
+    },
+    {
+        "firstname":"vijayakumar",
+        "lastname":"S",
+        "address":"Coimbatore",
+        "degree_year":"2023"
+    },
+    {
+        "firstname":"Sam Daniel",
+        "lastname":"S",
+        "address":"Coimbatore",
+        "degree_year":"2023"
+    }
+]

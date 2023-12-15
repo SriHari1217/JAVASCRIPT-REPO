@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p id="username"></p>
+    <script>
+        const serializedObj1 = localStorage.getItem('obj');
+
+const obj1 = JSON.parse(serializedObj1);
+        const firstName = obj1.name;
+        const password = obj1.age;
+        document.getElementById("username").innerHTML="UserName:"+firstName+"<br>"+"Password"+password
+        
+    
+        // const dataDisplay = document.getElementById("dataDisplay");
+    
+        // if (firstName && lastName && dob) {
+        //   // Display the data
+        //   dataDisplay.innerHTML = `
+        //     <p>First Name: ${firstName}</p>
+        //     <p>Last Name: ${lastName}</p>
+        //     <p>Date of Birth: ${dob}</p>
+        //   `;
+        // } else {
+        //   // Handle missing data
+        //   dataDisplay.textContent = "Data not found.";
+        // }
+      </script>
+    
+</body>
+</html>

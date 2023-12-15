@@ -1,24 +1,33 @@
+<!-- First Webpage (form.html) -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <p id="demo"></p>
-    <script>
-        // function task2(){
-        //     var a= "Sri";
-        //     var b = "Hari";
-        //     var c = 21;
-        //     console.log("First-Name", " ",a, "<br>" ,"Second-Name"," ",b,"<br>","Age"," ",c);
-        // }
-        // task2();
-        document.getElementById("demo").innerHTML="welcome"
-
-    </script>
+  <title>Form Page</title>
 </head>
 <body>
-    
-    
+  <form id="myForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName"><br>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName"><br>
+    <label for="dob">Date of Birth:</label>
+    <input type="text" id="dob" name="dob"><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById("myForm");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); 
+      const firstName = document.getElementById("firstName").value;
+      const lastName = document.getElementById("lastName").value;
+      const dob = document.getElementById("dob").value;
+      localStorage.setItem("firstName", firstName);
+      localStorage.setItem("lastName", lastName);
+      localStorage.setItem("dob", dob);
+      window.location.href = "Task-3.html";
+    });
+  </script>
 </body>
 </html>

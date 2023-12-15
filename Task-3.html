@@ -1,17 +1,27 @@
+<!-- Next Webpage (nextpage.html) -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        var a = 2002;
-        var b= 2036;
-        var c= b-a;
-        document.write("I will be Either"+" "+ c + " or "+ (c+1)  + " in "+ b );
-    </script>
+  <title>Next Page</title>
 </head>
 <body>
-    
+  <h1>Received Data:</h1>
+  <div id="dataDisplay">
+  </div>
+  <p id="firstName"></p>
+  <p id="lastName"></p>
+  <p id="dob"></p>
+
+  <script>
+    const firstName = localStorage.getItem("firstName");
+    const lastName = localStorage.getItem("lastName");
+    const dob = localStorage.getItem("dob");
+
+    document.getElementById("firstName").innerHTML="FirstName:"+firstName;
+    document.getElementById("lastName").innerHTML="lastName"+lastName;
+    document.getElementById("dob").innerHTML="Date"+dob;
+
+  
+  </script>
 </body>
 </html>

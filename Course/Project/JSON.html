@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        // var userdetails = new Object();
+        // userdetails.name="Sri Hari"
+        // userdetails.age=23;
+        // userdetails.date=new Date("2020-02-17");
+        // document.getElementById("demo").innerHTML=userdetails.name+" "+ userdetails.age+" "+userdetails.date
+
+        // var userdetails1=`{
+        //     "1":"sri",
+        //     "2":21
+        // }`
+        // document.getElementById("demo").innerHTML+=userdetails1.1+" "+userdetails1.2
+
+        var details=['{"marks":[1,2,3,4],"name":"hari" }' ];
+        var out=JSON.parse(details);
+        document.getElementById("demo").innerHTML=out.name+" "+ out.marks[0] +" "+" "+typeof(out)
+            // document.write(out.name);
+    </script>
+</body>
+</html>

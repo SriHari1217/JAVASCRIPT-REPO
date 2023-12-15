@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function task(){
+        let a= document.getElementById("demo").value;
+        let count=1;
+do{
+    if(count==10){
+        continue;
+    }
+    else{
+        document.getElementById("ind").innerHTML+="<tr>"+a+"</tr>";
+        count++;
+    }
+}while(true)
+        }
+       
+        
+        
+
+    </script>
+    
+</head>
+<body>
+    
+        <input type="text" id="demo">
+        <button onclick="task()">click</button>
+        <table id="ind"></table>
+    
+    
+</body>
+</html>

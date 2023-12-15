@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function create(){
+      let a=document.getElementById("fname").value;
+      let b=document.getElementById("lname").value;
+      let c=new Date(document.getElementById("birth").value)
+      let d=a+b+c.getDate()+c.getMonth()+c.getFullYear();
+      document.getElementById("pass").innerHTML="Password:"+`<input type=text value= ${d}>`;
+      document.getElementById("pass1").value=d;
+      let obj={
+        fname:a,
+        lanme:b,
+        birth:c,
+        pass:d
+      }
+      let out=JSON.stringify(obj);
+      console.log(out);
+
+    }
+  </script>
+</head>
+<body>
+  <label for="">firstName:</label>
+  <input type="text" name="" id="fname">
+  <label for="">lastName:</label>
+  <input type="text" name="" id="lname">
+  <label for="">DOB:</label>
+  <input type="date" name="" id="birth">
+  <input type="button" name="" id="" value="Create" onclick="create()">
+  <label for="">Password:</label>
+  <input type="text" name="" id="pass1">
+  
+   <p id="pass"></p>
+</body>
+</html>

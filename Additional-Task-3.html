@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<input type="text" id="text-field">
+<button id="button">Add</button>
+<select id="selection"></select>
+<ul id="list"></ul>
+<script>
+    
+const textField = document.getElementById("text-field");
+const button = document.getElementById("button");
+const select = document.getElementById("selection");
+const list = document.getElementById("list");
+
+
+button.addEventListener("click", () => {
+
+  
+  const text = textField.value;
+  
+ 
+  const option = document.createElement("option");
+  option.textContent = text;
+  select.appendChild(option);
+
+  const listItem = document.createElement("li");
+  listItem.textContent = text;
+  list.appendChild(listItem);
+  
+});
+</script>
+    
+</body>
+</html>

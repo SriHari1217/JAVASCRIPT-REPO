@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        
+        function fun(result){
+            document.getElementById("demo").innerHTML+=result;
+        }
+        function isOdd(a,callback){
+            if(a%2!=0){
+                result=true;
+            }
+            else{
+                result=false;
+
+            }
+            callback(result)
+        }
+        isOdd(4,fun);
+        isOdd(5,fun);
+    </script>
+    
+</body>
+</html>

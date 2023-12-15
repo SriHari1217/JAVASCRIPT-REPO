@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!-- <form action="" id="myform"> -->
+    <label for="">UserName</label>
+    <input type="text" name="" id="username"><br>
+    <label for="">Password</label>
+    <input type="password" name="" id="password"><br>
+    <button type="submit" id="asd">Submit</button>
+  <!-- </form> -->
+  <script>
+    const form = document.getElementById("asd");
+    form.addEventListener("click", (e)=> {
+      e.preventDefault();
+      const Name = document.getElementById("username").value;
+      const password = Number( document.getElementById("password").value);
+      // localStorage.setItem("username",Name);
+      // localStorage.setItem("password", password);
+      const obj = { name: Name,
+         age: password };
+const serializedObj = JSON.stringify(obj);
+localStorage.setItem('obj', serializedObj);
+window.location.href = "Resume-builder-res.html";
+         });
+  </script>
+    
+</body>
+</html>

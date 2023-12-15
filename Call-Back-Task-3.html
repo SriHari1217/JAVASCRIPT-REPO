@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun(result){
+            console.log(result);
+        }
+        function doubleChars(a,callback){
+            let result="";
+            for(let i=0;i<a.length;i++){
+                result+=a[i]+a[i]
+            }
+
+         callback(result);
+        }
+
+        doubleChars('Adrian',fun);
+        doubleChars('ssssnake',fun);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

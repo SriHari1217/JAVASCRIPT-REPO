@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p id="name"></p>
+        <p id="pass"></p>
+        <p id="date"></p>
+    </div>
+    <script>
+        var b = localStorage.getItem("userdetails")
+        var c = JSON.parse(b)
+        document.getElementById("name").innerHTML=c.name;
+        document.getElementById("pass").innerHTML=c.pass;
+        document.getElementById("date").innerHTML=c.date;
+    </script>
+</body>
+</html>

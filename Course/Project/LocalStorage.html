@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        
+        function click() {
+          if (localStorage.a) {
+            localStorage.a = Number(localStorage.a)+1;
+          } else {
+            localStorage.a = 1;
+          }
+          document.getElementById("demo").innerHTML = localStorage.a;
+        }
+        click();
+        </script>
+</head>
+<body>
+    
+    <button onclick="click()" type="button">Click me!</button>
+    
+    <p>Number of clicks:</p>
+    <p id="demo"></p>
+    
+    
+    
+</body>
+</html>

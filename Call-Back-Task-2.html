@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+//         function exclaim(a, callback) {
+//             console.log(a + callback());
+// }
+// function one() {
+//   return '!';
+// }
+// function two() {
+//   return '!!';
+// }
+//  exclaim('Adrian', one);
+//  exclaim('Adrian', two);
+
+
+function exclaim(result){
+    console.log(result)
+}
+function one(a,fun){
+    let d=a+"!"
+    fun(d)
+    
+}
+
+function two(a,fun){
+    let c=a+"!!"
+    fun(c);
+
+}
+one("adrian",exclaim);
+two("adrian",exclaim);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

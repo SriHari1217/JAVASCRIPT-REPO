@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sun()">click</button>
+    <div id="pl">
+        
+    </div>
+    <script>
+        
+           var a= {
+        movie_title : "Jailer", 
+        casting : "Rajinikanth", 
+        directors : "Nelson", 
+        music : "Anirudh Ravichander", 
+        poster_image : "https://timesofindia.indiatimes.com/photo/92282228.cms"
+  
+    }
+    sun=()=>{
+        var z=document.getElementById("pl")
+                    z.setAttribute('class',"card")
+                    z.style.margin="10px"
+                    z.style.backgroundColor="lightblue"
+                    var y=document.createElement("div")
+                    var x=document.createElement("img")
+                    x.setAttribute("src",a.poster_image)
+                    x.style.height="200px"
+                    x.style.width="100px"
+                    z.appendChild(x)
+                    y.innerHTML= a.movie_title + "<br>" + a.casting + "<br>" + a.directors + "<br>" + a.music
+                    z.appendChild(y)
+        }
+        </script>
+</body>
+</html>
