@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Calling Example</title>
+</head>
+<body>
+
+    <label for="AdhaarInput">Enter Aadhaar Number:</label>
+    <input type="text" id="AdhaarInput" oninput="formatAndValidateAadhaar()">
+    <p id="result"></p>
+
+    <script>
+        function formatAadhaar() {
+            let inputElement = document.getElementById('AdhaarInput');
+            let val = inputElement.value.replace(/\s/g, ''); // Remove existing spaces
+            let formattedVal = '';
+
+            // Add a space after every fourth digit
+            for (let i = 0; i < val.length; i++) {
+                formattedVal += val[i];
+                if ((i + 1) % 4 === 0 && i + 1 !== val.length) {
+                    formattedVal += ' ';
+                }
+            }
+
+            // Update the input value with the formatted Aadhaar number
+            inputElement.value = formattedVal;
+        }
+
+        function validateAadhaar(value) {
+            const aadhaarRegex = /^[2-9]\d{3}\s\d{4}\s\d{4}$/;
+            return aadhaarRegex.test(value);
+        }
+
+        function formatAndValidateAadhaar() {
+            let inputElement = document.getElementById('AdhaarInput');
+            let val = inputElement.value;
+
+            // Check if the first character is 0, 1, special character, or alphabet
+            if (/^[01a-zA-Z]/.test(val[0])) {
+                inputElement.disabled = true;
+                document.getElementById('result').innerHTML = 'Invalid first character';
+                return;
+            } else {
+                inputElement.disabled = false;
+            }
+            
+            formatAadhaar(); // Call the formatAadhaar function
+
+            // Validate the Aadhaar number
+            if (validateAadhaar(val.replace(/\s/g, ''))) {
+                document.getElementById('result').innerHTML = 'Aadhaar Number is valid';
+            } else {
+                document.getElementById('result').innerHTML = 'Invalid Aadhaar Number';
+            }
+        }
+    </script>
+
+</body>
+</html>

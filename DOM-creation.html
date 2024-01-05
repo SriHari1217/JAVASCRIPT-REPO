@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Dynamic Elements</title>
-</head>
-<body>
-
-<script>
-    var divElement = document.createElement("div");
-    var textNode = document.createTextNode("Login Page");
-    var inputElement = document.createElement("input");
-    inputElement.type = "text"; 
-    var buttonElement = document.createElement("button");
-    var buttonText = document.createTextNode("Click");
-    buttonElement.appendChild(buttonText);
-    divElement.appendChild(textNode);
-    divElement.appendChild(inputElement);
-    divElement.appendChild(buttonElement);
-    document.body.appendChild(divElement);
-</script>
-
-</body>
+  </head>
+  <body>
+    <script>
+      var divElement = document.createElement("div");
+      var textNode = document.createTextNode("Login Page");
+      var inputElement = document.createElement("input");
+      inputElement.type = "text";
+      var buttonElement = document.createElement("button");
+      var buttonText = document.createTextNode("Click");
+      buttonElement.appendChild(buttonText);
+      divElement.appendChild(textNode);
+      divElement.appendChild(inputElement);
+      divElement.appendChild(buttonElement);
+      document.body.appendChild(divElement);
+    </script>
+  </body>
 </html>

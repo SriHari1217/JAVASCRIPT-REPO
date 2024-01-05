@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+
+</head>
+<body>
+    <h1 id="head">0</h1>
+    <input type="button" value="increase" onclick="inc()">
+    <input type="button" value="decrease" onclick="dec()">
+    <input type="button" value="Reset" onclick="res()">
+    <script>
+        let count=0
+        let a=document.getElementById("head")
+        function inc(){
+        ++count
+        a.textContent = count;
+        }
+        function dec(){
+        --count
+        a.textContent=count;
+        }
+        function res(){
+        count=0;    
+        a.textContent=count;
+        }
+    </script>
+    
+</body>
+</html>

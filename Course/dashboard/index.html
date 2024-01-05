@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blueprint Scanner</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        #image-upload {
+            display: none;
+        }
+
+        #image-preview {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="mb-4">Building Blueprint Scanner</h2>
+
+        <form id="upload-form">
+            <div class="form-group">
+                <label for="image-upload" class="btn btn-primary">Upload Blueprint</label>
+                <input type="file" id="image-upload" accept="image/*">
+            </div>
+        </form>
+
+        <div id="result" class="d-none">
+            <h4>Survey Result:</h4>
+            <!-- Display survey result here -->
+        </div>
+
+        <img id="image-preview" src="#" alt="Preview" class="d-none">
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Preview uploaded image
+            $("#image-upload").change(function () {
+                readURL(this);
+            });
+
+            // Submit form and display result (dummy logic)
+            $("#upload-form").submit(function (e) {
+                e.preventDefault();
+
+                // Perform image processing and survey logic here (dummy logic)
+                var surveyResult = "Excellent";
+
+                // Display result
+                $("#result").removeClass("d-none").html("<strong>Survey Result:</strong> " + surveyResult);
+            });
+        });
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $("#image-preview").attr("src", e.target.result).removeClass("d-none");
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</body>
+
+</html>
